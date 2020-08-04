@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "d2214acb-3ead-4da3-a802-6b16d91754fd",
+		"name": "training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "training",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f189dd6-7175-494e-8c10-f8fa43b545d1",
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"hello swapnasis is present\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"hello swapnasis\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/261797d1-4f0b-4db8-9f67-d0754c8f067f",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"261797d1-4f0b-4db8-9f67-d0754c8f067f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "demo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b7461c0-53fa-44cd-9677-24ae72e33f22",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/73e4f36e-af98-419c-8d88-a81255795f0b",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"73e4f36e-af98-419c-8d88-a81255795f0b"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
